@@ -1,7 +1,8 @@
-# SSH Config File
-
-Host 139985-web-01
-    HostName 54.236.12.229
-    User ubuntu
+# Configure ssh client so that you can connect to a server without typing a password.
+Host *
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials no
     IdentityFile ~/.ssh/school
     PasswordAuthentication no
